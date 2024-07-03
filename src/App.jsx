@@ -29,14 +29,14 @@ function App() {
                 <input type="text" name="years" id="" />
               </div>
             </div>
-            <div className="query-type">
-              <label htmlFor="query-type"> Query Type <span className="required-input">*</span></label>
+            <div className="mortage-type">
+              <label htmlFor="mortage-type"> Mortage Type <span className="required-input">*</span></label>
               <div className="radio-container" style={{ marginTop: '8px' }}>
                 <div className="radio-option" style={{marginBottom: '1em'}}>
                   <input
                     type="radio"
                     id="repayment"
-                    name="query-type"
+                    name="mortage-type"
                     value="repayment"
                     
                   />
@@ -46,7 +46,7 @@ function App() {
                   <input
                     type="radio"
                     id="interest-only"
-                    name="query-type"
+                    name="mortage-type"
                     value="interest-only"
                    
                   />
