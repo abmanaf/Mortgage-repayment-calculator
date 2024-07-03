@@ -11,7 +11,7 @@ function App() {
      <div className="container" >
         <div className='left-container'>
           <div className='header' >
-            <h2 className='header'>Mortage Calculator</h2>
+            <h2 className='head'>Mortage Calculator</h2>
             <a href="">clear All</a>
           </div>
           <form action="">
@@ -20,11 +20,11 @@ function App() {
               <input type="text" name="mortage-amount" id="" />
             </div>
             <div className='mortage-inputs'>
-              <div>
+              <div style={{width: '50%'}}>
                 <label htmlFor="">Mortage Team</label>
                 <input type="text" name="years" id="" />
               </div>
-              <div>
+              <div style={{width: '50%'}}>
                 <label htmlFor="">Interest Rate</label>
                 <input type="text" name="years" id="" />
               </div>
@@ -54,15 +54,17 @@ function App() {
                 </div>
               </div>
               </div>
-            <button style={{ padding: '0.5em', borderRadius: '2em', cursor: 'pointer', border: 'none', display: 'flex', justifyContent: 'center', gap: '0.5em', alignItems: 'center' }}>
+            <button style={{ gap: '0.5em' }}>
             <img src="public/assets/images/icon-calculator.svg" alt="" />Calculate Repayments
           </button>
           </form>
         </div>
         <div className='right-container'>
-          <span className="product-name" style={{fontWeight: '800'}}>Summary</span>
-           
-
+          <div className='empty-container-image'>
+          <img src="../assets/images/illustration-empty.svg" alt="" />           
+          <h2 style={{color: 'var(--white)'}}>Results shown here</h2>
+          <p style={{color: 'var( --slate-500)'}}>Complete the form and click "calculate reapymets" to see what your monthly repayments would be</p>
+        </div>
         </div>
       </div>
     </>
