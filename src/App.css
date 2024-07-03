@@ -63,6 +63,16 @@ input[type="text"] {
   margin-top: 0.5em;
   border: 1px solid var(--slate-900);
 }
+input[type="text"]:hover {
+  outline: 1px solid var(--slate-900);
+  border: 1px solid var(--slate-900);
+  cursor: pointer;
+}
+
+input[type="text"]:focus {
+  outline: 1px solid var(--lime);
+  border: 1px solid var(--lime);
+}
 .mortage-inputs {
   display: flex;
   gap: 1em;
@@ -84,17 +94,18 @@ input[type="text"] {
   cursor: pointer;
   font-weight: 600;
 }
+
+.radio-option:active {
+  background-color: hsl(61, 59%, 67%);
+}
+
 .radio-option label {
   margin-left: 0.5em;
 }
 
 .radio-option:hover {
-  outline: 1px solid var(--slate-900);
-  border: 1px solid var(--slate-900);
-}
-
-.radio-option:active {
-  background-color: var(--slate-100);
+  outline: 1px solid var(--lime);
+  border: 1px solid var(--lime);
 }
 
 .right-container {
@@ -120,7 +131,7 @@ button {
   border-radius: 2em;
   cursor: pointer;
   border: none;
-  background-color: var(--lime) !important;
+  background-color: var(--lime);
   color: var(--slate-900);
   font-size: 1em;
   font-weight: 600;
@@ -133,7 +144,7 @@ button {
 }
 
 button:hover {
-  background-image: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+  background-color: hsl(61, 59%, 67%);
 }
 .empty-container-image h2 {
   margin-bottom: 8px;
