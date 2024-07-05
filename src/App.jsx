@@ -1,44 +1,53 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from 'react';
+import './App.css';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
   return (
     <>
-     <div className="container" >
+      <div className="container">
         <div className='left-container'>
-          <div className='header' >
-            <h2 className='head'>Mortage Calculator</h2>
-            <a href="">clear All</a>
+          <div className='header'>
+            <h2 className='head'>Mortgage Calculator</h2>
+            <a href="">Clear All</a>
           </div>
           <form action="">
             <div className='mortage-amount'>
-              <label htmlFor="">Mortage Amount</label> <br />
-              <input type="text" name="mortage-amount" id="" />
+              <div className='label'>
+                <label htmlFor="">Mortgage Amount</label> <br />
+              </div>
+              <div className="input-container" style={{ marginTop: '8px' }}>
+                <span style={{ textAlign: 'center', color: 'var(--slate-900)' }} className='icon'>£</span>
+                <input className="input-field" type="text" name="amount" />
+              </div>
             </div>
             <div className='mortage-inputs'>
-              <div style={{width: '50%'}}>
-                <label htmlFor="">Mortage Team</label>
-                <input type="text" name="years" id="" />
+              <div className='label' style={{ width: '100%' }}>
+                <label htmlFor="mortgage-term">Mortgage Term</label>
+                <div className="input-container" style={{ marginTop: '8px' }}>
+                  <input className="input-field" type="text" name="mortgage-term" />
+                  <span style={{ textAlign: 'center', color: 'var(--slate-900)' }} className='icon'>Years</span>
+                </div>
               </div>
-              <div style={{width: '50%'}}>
-                <label htmlFor="">Interest Rate</label>
-                <input type="text" name="years" id="" />
+              <div className='label' style={{ width: '100%' }}>
+                <label htmlFor="interest-rate">Interest Rate</label>
+                <div className="input-container" style={{ marginTop: '8px' }}>
+                  <input className="input-field" type="text" name="interest-rate" />
+                  <span style={{
+                    textAlign: 'center', color: 'var(--slate-900)' }} className='icon'>%</span>
+                </div>
               </div>
             </div>
-            <div className="mortage-type">
-              <label htmlFor="mortage-type"> Mortage Type <span className="required-input">*</span></label>
+            <div className="mortgage-type">
+              <label htmlFor="mortgage-type">Mortgage Type</label>
               <div className="radio-container" style={{ marginTop: '8px' }}>
-                <div className="radio-option" style={{marginBottom: '1em'}}>
+                <div className="radio-option" style={{ marginBottom: '1em' }}>
                   <input
                     type="radio"
                     id="repayment"
-                    name="mortage-type"
+                    name="mortgage-type"
                     value="repayment"
-                    
                   />
                   <label htmlFor="repayment"> Repayment</label>
                 </div>
@@ -46,29 +55,28 @@ function App() {
                   <input
                     type="radio"
                     id="interest-only"
-                    name="mortage-type"
+                    name="mortgage-type"
                     value="interest-only"
-                   
                   />
                   <label htmlFor="interest-only"> Interest Only</label>
                 </div>
               </div>
-              </div>
+            </div>
             <button style={{ gap: '0.5em' }}>
-            <img src="public/assets/images/icon-calculator.svg" alt="" />Calculate Repayments
-          </button>
+              <img src="/assets/images/icon-calculator.svg" alt="icon-calculator" />Calculate Repayments
+            </button>
           </form>
         </div>
         <div className='right-container'>
           <div className='empty-container-image'>
-          <img src="../assets/images/illustration-empty.svg" alt="" />           
-          <h2 style={{color: 'var(--white)'}}>Results shown here</h2>
-          <p style={{color: 'var( --slate-500)'}}>Complete the form and click "calculate reapymets" to see what your monthly repayments would be</p>
-        </div>
+            <img src="../assets/images/illustration-empty.svg" alt="illustration-empty" />
+            <h2 style={{ color: 'var(--white)' }}>Results shown here</h2>
+            <p style={{ color: 'var(--slate-500)' }}>Complete the form and click "calculate repayments" to see what your monthly repayments would be</p>
+          </div>
         </div>
       </div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
