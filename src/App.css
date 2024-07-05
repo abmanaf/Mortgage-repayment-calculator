@@ -6,10 +6,10 @@
   font-family: "Hanken Grotesk", sans-serif;
 }
 :root {
-  /* primary*/
+  /* primary */
   --lime: hsl(61, 70%, 52%);
   --red: hsl(4, 69%, 50%);
-  /* Neutral*/
+  /* Neutral */
   --white: hsl(0, 0%, 100%);
   --slate-100: hsl(202, 86%, 94%);
   --slate-200: hsl(203, 41%, 72%);
@@ -56,56 +56,89 @@ a {
   background-color: var(--white);
   padding: 2em;
 }
-input[type="text"] {
+
+.input-container {
+  display: flex;
+  width: 100%;
+  margin-bottom: 15px;
+  border: 1px solid var(--slate-200);
+  border-radius: 5px;
+}
+.input-field {
   width: 100%;
   padding: 6px;
-  border-radius: 5px;
-  margin-top: 0.5em;
-  border: 1px solid var(--slate-900);
+  border: none;
+  outline: none;
 }
-input[type="text"]:hover {
+
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--slate-100);
+  color: var(--slate-900);
+  min-width: 50px;
+  text-align: center;
+}
+
+.input-container:hover {
   outline: 1px solid var(--slate-900);
   border: 1px solid var(--slate-900);
   cursor: pointer;
 }
-
-input[type="text"]:focus {
+.input-container:focus-within {
   outline: 1px solid var(--lime);
   border: 1px solid var(--lime);
 }
+.input-container:focus-within .icon {
+  background-color: var(--lime);
+  color: var(--white);
+}
+
 .mortage-inputs {
   display: flex;
   gap: 1em;
 }
-.mortage-amount,
-.mortage-inputs {
+.mortage-amount {
   margin-bottom: 1em;
 }
 
 .radio-container {
   gap: 1em;
 }
-
 .radio-option {
-  border: 1px solid var(--slate-900);
+  border: 1px solid var(--slate-200);
   width: 100%;
   padding: 8px;
   border-radius: 5px;
   cursor: pointer;
   font-weight: 600;
+  display: flex;
+  align-items: center;
 }
 
-.radio-option:active {
+.radio-option input[type="radio"] {
+  color: var(--lime);
+}
+
+.radio-option:hover {
+  outline: 1px solid hsl(61, 59%, 67%);
+  border: 1px solid hsl(61, 59%, 67%);
+}
+
+.radio-option:focus-within,
+.radio-option input[type="radio"]:checked + label {
+  background-color: hsl(61, 59%, 67%);
+  outline: 1px solid hsl(61, 59%, 67%);
+  border: 1px solid hsl(61, 59%, 67%);
+}
+
+.radio-option input[type="radio"] {
   background-color: hsl(61, 59%, 67%);
 }
 
 .radio-option label {
   margin-left: 0.5em;
-}
-
-.radio-option:hover {
-  outline: 1px solid var(--lime);
-  border: 1px solid var(--lime);
 }
 
 .right-container {
@@ -175,6 +208,14 @@ button:hover {
   .header {
     flex-direction: column;
     align-items: start;
+  }
+
+  .mortage-inputs {
+    flex-direction: column;
+    gap: 0;
+  }
+  .input-container {
+    width: 100%;
   }
   .right-container {
     padding: 2rem;
