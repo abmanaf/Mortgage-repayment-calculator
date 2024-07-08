@@ -65,6 +65,7 @@ const submitForms = () => {
                   />
                   <span style={{textAlign: 'center', color: 'var(--slate-900)' }} className='icon'> %</span>
                 </div>
+                {error.interestRate && <span className='error-message'>This field is required</span>}
               </div>
             </div>
             <div className="mortgage-type">
