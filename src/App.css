@@ -60,9 +60,11 @@ a {
 .input-container {
   display: flex;
   width: 100%;
-  margin-bottom: 15px;
   border: 1px solid var(--slate-200);
   border-radius: 5px;
+}
+.mortgage-amount {
+  margin-bottom: 1em;
 }
 .input-field {
   width: 100%;
@@ -188,6 +190,10 @@ button:hover {
   font-size: 0.95em;
 }
 
+.error-message {
+  color: red;
+}
+
 @media screen and (max-width: 500px) {
   body {
     height: auto;
@@ -212,7 +218,6 @@ button:hover {
 
   .mortage-inputs {
     flex-direction: column;
-    gap: 0;
   }
   .input-container {
     width: 100%;
