@@ -55,7 +55,7 @@ const submitForms = () => {
                 </div>
                 {error.mortgageTerm && <span className='error-message'>This field is required</span>}
               </div>
-              <div className='label' style={{ width: '100%' }}>
+              <div className='label' style={{ width: '100%', marginBottom: '15px'}}>
                 <label htmlFor="interest-rate">Interest Rate</label>
                 <div className="input-container" style={{ marginTop: '8px' }}>
                   <input 
