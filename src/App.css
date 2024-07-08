@@ -16,6 +16,7 @@
   --slate-500: hsl(200, 26%, 54%);
   --slate-700: hsl(200, 24%, 40%);
   --slate-900: hsl(202, 55%, 16%);
+  --slate-1000: hsl(204, 51%, 13%);
 }
 
 body {
@@ -148,7 +149,6 @@ a {
   padding: 1.5rem;
   width: 100%;
   display: flex;
-  border: 1px solid red;
   /*
   border-radius: 0 275px 25px;
   */
@@ -156,10 +156,44 @@ a {
 
   background-color: var(--slate-900);
 }
-.inner-results-container {
-  background-color: #000000;
-  border: 1px solid #000000;
-  filter: drop-shadow(0.5rem 0.5rem #000000);
+.right-container .results-container {
+  padding: 10px;
+}
+
+.right-container .results-container h3 {
+  margin-bottom: 10px;
+}
+
+.right-container .results-container .inner-results-container h1 {
+  margin: 20px 0 20px;
+}
+
+.right-container .results-container .inner-results-container .line {
+  margin: 20px 0 20px;
+  border: 0.5px solid var(--slate-100);
+  outline: none;
+}
+
+.right-container .results-container .inner-results-container > div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  margin-bottom: 40px;
+}
+
+.right-container .results-container .inner-results-container {
+  background-color: var(--slate-1000);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(20, 20, 20, 0.6);
+  border-top: 5px solid var(--lime);
+  margin-bottom: 20px;
+  margin-top: 25px;
+}
+
+.right-container .results-container .monthly-result {
+  color: var(--lime);
+  font-size: 3rem;
 }
 
 button {
