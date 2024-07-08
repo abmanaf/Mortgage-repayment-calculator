@@ -8,11 +8,11 @@ function App() {
     <>
       <div className="container">
         <div className='left-container'>
+          <form action="">
           <div className='header'>
             <h2 className='head'>Mortgage Calculator</h2>
             <a href="">Clear All</a>
           </div>
-          <form action="">
             <div className='mortage-amount'>
               <div className='label'>
                 <label htmlFor="">Mortgage Amount</label> <br />
