@@ -30,21 +30,39 @@ const submitForms = () => {
               </div>
               <div className="input-container" style={{ marginTop: '8px' }}>
                 <span style={{ textAlign: 'center', color: 'var(--slate-900)' }} className='icon'>£</span>
-                <input className="input-field" type="text" name="amount" value={mortgageAmount} onChange={(e)=> setMortgageAmount(e.target.value)}  />
+                <input
+                  className="input-field"
+                  type="text"
+                  name="amount"
+                  value={mortgageAmount} 
+                  onChange={(e)=> setMortgageAmount(e.target.value)} 
+                 />
               </div>
             </div>
             <div className='mortage-inputs'>
               <div className='label' style={{ width: '100%' }}>
                 <label htmlFor="mortgage-term">Mortgage Term</label>
                 <div className="input-container" style={{ marginTop: '8px' }}>
-                  <input className="input-field" type="text" name="mortgage-term" value={mortgageTerm} onChange={(e)=>setMortgageTerm(e.target.value)}/>
+                  <input 
+                    className="input-field"
+                    type="text"
+                    name="mortgage-term"
+                    value={mortgageTerm}
+                    onChange={(e)=>setMortgageTerm(e.target.value)}
+                  />
                   <span style={{ textAlign: 'center', color: 'var(--slate-900)' }} className='icon'>Years</span>
                 </div>
               </div>
               <div className='label' style={{ width: '100%' }}>
                 <label htmlFor="interest-rate">Interest Rate</label>
                 <div className="input-container" style={{ marginTop: '8px' }}>
-                  <input className="input-field" type="text" name="interest-rate" value={interestRate} onChange={(e)=>setInterestRate(e.target.value)}/>
+                  <input 
+                    className="input-field"
+                    type="text"
+                    name="interest-rate"
+                    value={interestRate}
+                    onChange={(e)=>setInterestRate(e.target.value)}
+                  />
                   <span style={{
                     textAlign: 'center', color: 'var(--slate-900)' }} className='icon'>%</span>
                 </div>
