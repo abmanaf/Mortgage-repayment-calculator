@@ -38,6 +38,7 @@ const submitForms = () => {
                   onChange={(e)=> setMortgageAmount(e.target.value)} 
                  />
               </div>
+              {error.mortgageAmount && <span className='error-message'>This field is required</span>}
             </div>
             <div className='mortage-inputs'>
               <div className='label' style={{ width: '100%' }}>
@@ -52,6 +53,7 @@ const submitForms = () => {
                   />
                   <span style={{ textAlign: 'center', color: 'var(--slate-900)' }} className='icon'>Years</span>
                 </div>
+                {error.mortgageTerm && <span className='error-message'>This field is required</span>}
               </div>
               <div className='label' style={{ width: '100%' }}>
                 <label htmlFor="interest-rate">Interest Rate</label>
