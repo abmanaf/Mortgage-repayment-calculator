@@ -162,14 +162,22 @@ function App() {
         <div className='right-container'>
           {isSubmitted ? (
             <div className='results-container'>
+              <h2>Your Results</h2>
+              <p>Your are shown below based on the information you provided. To adjust the results,
+                 edit the form and click "calculate repayments" again.
+              </p>
+              <div className='inner-results-container'>
               <h2 style={{ color: 'var(--white)' }}>Monthly Payment: £{monthlyPayment}</h2>
               <h2 style={{ color: 'var(--white)' }}>Total Payment: £{totalPayment}</h2>
+              </div>
             </div>
           ) : (
-            <div className='empty-container-image'>
+            <div className='empty-container-image' style={{display: 'flex', justifyContent: 'center',alignItems: 'center',textAlign: 'center',}}>
+              <div>
               <img src="../assets/images/illustration-empty.svg" alt="illustration-empty" />
               <h2 style={{ color: 'var(--white)' }}>Results shown here</h2>
               <p style={{ color: 'var(--slate-500)' }}>Complete the form and click "calculate repayments" to see what your monthly repayments would be</p>
+              </div>
             </div>
           )}
         </div>
