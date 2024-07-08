@@ -2,38 +2,49 @@ import { useState } from 'react';
 import './App.css';
 
 function App() {
-  const [count, setCount] = useState(0);
+const [mortgageAmount, setMortgageAmount] = useState("");
+const [mortgageTerm, setMortgageTerm] = useState("");
+const [interestRate, setInterestRate] = useState("");
+const [mortgageType, setMortgageType] =useState("");
+const [error, setError] = useState({
+  mortgageAmount: false,
+  mortgageTerm: false,
+  interestRate: false,
+  mortgageType: false
+})
+const submitForms = () => {
 
+}
   return (
     <>
       <div className="container">
         <div className='left-container'>
-          <form action="">
-          <div className='header'>
-            <h2 className='head'>Mortgage Calculator</h2>
-            <a href="">Clear All</a>
-          </div>
-            <div className='mortage-amount'>
+          <form action="" onSubmit={submitForms}>
+            <div className='header'>
+              <h2 className='head'>Mortgage Calculator</h2>
+              <a href="">Clear All</a>
+            </div>
+            <div className='mortgage-amount'>
               <div className='label'>
                 <label htmlFor="">Mortgage Amount</label> <br />
               </div>
               <div className="input-container" style={{ marginTop: '8px' }}>
                 <span style={{ textAlign: 'center', color: 'var(--slate-900)' }} className='icon'>£</span>
-                <input className="input-field" type="text" name="amount" />
+                <input className="input-field" type="text" name="amount" value={mortgageAmount} onChange={(e)=> setMortgageAmount(e.target.value)}  />
               </div>
             </div>
             <div className='mortage-inputs'>
               <div className='label' style={{ width: '100%' }}>
                 <label htmlFor="mortgage-term">Mortgage Term</label>
                 <div className="input-container" style={{ marginTop: '8px' }}>
-                  <input className="input-field" type="text" name="mortgage-term" />
+                  <input className="input-field" type="text" name="mortgage-term" value={mortgageTerm} onChange={(e)=>setMortgageTerm(e.target.value)}/>
                   <span style={{ textAlign: 'center', color: 'var(--slate-900)' }} className='icon'>Years</span>
                 </div>
               </div>
               <div className='label' style={{ width: '100%' }}>
                 <label htmlFor="interest-rate">Interest Rate</label>
                 <div className="input-container" style={{ marginTop: '8px' }}>
-                  <input className="input-field" type="text" name="interest-rate" />
+                  <input className="input-field" type="text" name="interest-rate" value={interestRate} onChange={(e)=>setInterestRate(e.target.value)}/>
                   <span style={{
                     textAlign: 'center', color: 'var(--slate-900)' }} className='icon'>%</span>
                 </div>
