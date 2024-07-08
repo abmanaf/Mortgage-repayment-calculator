@@ -76,6 +76,8 @@ const submitForms = () => {
                     id="repayment"
                     name="mortgage-type"
                     value="repayment"
+                    checked={mortgageType === "repayment"}
+                    onChange={(e)=>setMortgageType(e.target.value)}
                   />
                   <label htmlFor="repayment"> Repayment</label>
                 </div>
@@ -85,10 +87,13 @@ const submitForms = () => {
                     id="interest-only"
                     name="mortgage-type"
                     value="interest-only"
+                    checked={mortgageType === "interest-only"}
+                    onChange={(e)=> setMortgageType(e.target.value)}
                   />
                   <label htmlFor="interest-only"> Interest Only</label>
                 </div>
               </div>
+              {error.mortgageType && <span className='error-message'>This field required</span>}
             </div>
             <button style={{ gap: '0.5em' }}>
               <img src="/assets/images/icon-calculator.svg" alt="icon-calculator" />Calculate Repayments
