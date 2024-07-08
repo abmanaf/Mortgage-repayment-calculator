@@ -63,8 +63,7 @@ const submitForms = () => {
                     value={interestRate}
                     onChange={(e)=>setInterestRate(e.target.value)}
                   />
-                  <span style={{
-                    textAlign: 'center', color: 'var(--slate-900)' }} className='icon'>%</span>
+                  <span style={{textAlign: 'center', color: 'var(--slate-900)' }} className='icon'> %</span>
                 </div>
               </div>
             </div>
