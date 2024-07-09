@@ -172,6 +172,7 @@ a {
   margin: 20px 0 20px;
   border: 0.5px solid var(--slate-100);
   outline: none;
+  opacity: 0.2;
 }
 
 .right-container .results-container .inner-results-container > div {
@@ -302,10 +303,6 @@ button:hover {
     border-radius: 0 0 15px 15px;
     padding: 1.5rem;
     width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
 
     /*
   border-radius: 0 275px 25px;
