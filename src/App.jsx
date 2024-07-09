@@ -163,7 +163,7 @@ function App() {
           {isSubmitted ? (
             <div className='results-container'>
               <h2 style={{color: 'var(--white)', marginBottom: '8px'}}>Your results</h2>
-              <p style={{color: 'var(--slate-100)', opacity: '0.5'}}>Your are shown below based on the information you provided. To adjust the results,
+              <p style={{color: 'var(--slate-100)', opacity: '0.5', fontSize: '0.89em'}}>Your results are shown below based on the information you provided. To adjust the results,
                  edit the form and click "calculate repayments" again.
               </p>
               <div className='inner-results-container'>
