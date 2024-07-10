@@ -31,7 +31,7 @@ body {
   display: flex;
   justify-content: center;
   width: 55rem;
-  height: 29rem;
+  height: 32rem;
   border-radius: 25px;
   background-color: var(--white);
   box-shadow: 10px 10px 20px 12px hsla(221, 100%, 96%, 0.6);
@@ -184,7 +184,7 @@ a {
 
 .right-container .results-container .inner-results-container {
   background-color: var(--slate-1000);
-  padding: 20px;
+  padding: 30px;
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(20, 20, 20, 0.6);
   border-top: 5px solid var(--lime);
