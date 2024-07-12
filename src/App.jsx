@@ -107,7 +107,7 @@ function App() {
                     value={mortgageTerm}
                     onChange={(e) => setMortgageTerm(e.target.value)}
                   />
-                  <span style={{ textAlign: 'center', color: 'var(--slate-900)' }} className='icon'>Years</span>
+                   <span style={{ textAlign: 'center', color: 'var(--slate-900)' }} className='icon'>Years</span>
                 </div>
                 {error.mortgageTerm && <span className='error-message'>This field is required</span>}
               </div>
