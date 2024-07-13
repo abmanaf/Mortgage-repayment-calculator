@@ -121,6 +121,7 @@ function App() {
                     value={interestRate}
                     onChange={(e) => setInterestRate(e.target.value)}
                   />
+                  
                   <span style={{ textAlign: 'center', color: 'var(--slate-900)' }} className='icon'> %</span>
                 </div>
                 {error.interestRate && <span className='error-message'>This field is required</span>}
