@@ -231,6 +231,10 @@ button:hover {
 .error-message {
   color: red;
 }
+.icon-error {
+  background-color: red;
+  color: var(--white);
+}
 
 @media screen and (max-width: 500px) {
   body {
