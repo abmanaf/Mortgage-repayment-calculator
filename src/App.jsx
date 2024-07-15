@@ -163,6 +163,7 @@ function App() {
         <div className='right-container'>
           {isSubmitted ? (
             <div className='results-container'>
+              <div>
               <h2 style={{color: 'var(--white)', marginBottom: '8px'}}>Your results</h2>
               <p style={{color: 'var(--slate-100)', opacity: '0.5', fontSize: '0.89em'}}>Your results are shown below based on the information you provided. To adjust the results,
                  edit the form and click "calculate repayments" again.
@@ -171,6 +172,7 @@ function App() {
               <h2 style={{color: 'var(--slate-100)', fontSize: '1em', opacity: '0.5'}} > Your monthly repayments </h2><span className="monthly-result"> £{monthlyPayment} </span>
               <hr className='line'/>
               <h2 style={{ color: 'var(--white)',fontSize: '1em', opacity: '0.5' }}>Total you'll repay over the term</h2><span style={{fontSize:'1.5em',  color: 'var(--white)'}}> £{totalPayment}</span>
+              </div>
               </div>
             </div>
           ) : (
