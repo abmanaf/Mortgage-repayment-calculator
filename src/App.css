@@ -71,6 +71,7 @@ a {
   padding: 10px;
   border: none;
   outline: none;
+  background-color: var(--white) !important;
 }
 
 .icon {
@@ -119,9 +120,11 @@ a {
   align-items: center;
 }
 
+/*
 .radio-option input[type="radio"] {
   color: var(--lime);
 }
+ */
 
 .radio-option:hover {
   outline: 1px solid hsl(61, 59%, 67%);
@@ -134,10 +137,11 @@ a {
   outline: 1px solid hsl(61, 59%, 67%);
   border: 1px solid hsl(61, 59%, 67%);
 }
-
+/*
 .radio-option input[type="radio"] {
   background-color: hsl(61, 59%, 67%);
 }
+*/
 
 .radio-option label {
   margin-left: 0.5em;
