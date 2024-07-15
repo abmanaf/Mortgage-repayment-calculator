@@ -127,15 +127,18 @@ a {
  */
 
 .radio-option:hover {
-  outline: 1px solid hsl(61, 59%, 67%);
+  outline: 1px solid hsl(61, 51%, 79%);
   border: 1px solid hsl(61, 59%, 67%);
 }
 
-.radio-option:focus-within,
-.radio-option input[type="radio"]:checked + label {
-  background-color: hsl(61, 59%, 67%);
+.radio-option:focus-within {
+  background-color: hsl(61, 51%, 79%);
+
   outline: 1px solid hsl(61, 59%, 67%);
   border: 1px solid hsl(61, 59%, 67%);
+}
+.radio-option input[type="radio"]:checked + label {
+  background-color: hsl(61, 51%, 79%);
 }
 /*
 .radio-option input[type="radio"] {
