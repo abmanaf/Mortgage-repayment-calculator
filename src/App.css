@@ -151,7 +151,6 @@ a {
   padding: 1.5rem;
   width: 100%;
   display: flex;
-  align-items: start;
   /*
   border-radius: 0 275px 25px;
   */
@@ -161,6 +160,8 @@ a {
 }
 .right-container .results-container {
   padding: 10px;
+  display: flex;
+  align-items: start;
 }
 
 .right-container .results-container h3 {
