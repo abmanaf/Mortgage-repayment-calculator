@@ -85,7 +85,7 @@ function App() {
                 <label htmlFor="">Mortgage Amount</label> <br />
               </div>
               <div className="input-container" style={{ marginTop: '8px' }}>
-                <span style={{ textAlign: 'center', color: 'var(--slate-900)' }} className='icon'>£</span>
+                <span style={{ textAlign: 'center' }} className={`icon ${error.mortgageAmount ? 'icon-error': ''}`} >£</span>
                 <input
                   className="input-field"
                   type="text"
@@ -107,7 +107,7 @@ function App() {
                     value={mortgageTerm}
                     onChange={(e) => setMortgageTerm(e.target.value)}
                   />
-                   <span style={{ textAlign: 'center', color: 'var(--slate-900)' }} className='icon'>Years</span>
+                   <span style={{ textAlign: 'center' }} className={`icon ${error.mortgageTerm ? 'icon-error': ''}`}>Years</span>
                 </div>
                 {error.mortgageTerm && <span className='error-message'>This field is required</span>}
               </div>
@@ -122,7 +122,7 @@ function App() {
                     onChange={(e) => setInterestRate(e.target.value)}
                   />
 
-                  <span style={{ textAlign: 'center', color: 'var(--slate-900)' }} className='icon'> %</span>
+                  <span style={{ textAlign: 'center' }} className={`icon ${error.interestRate ? 'icon-error': ''}`}> %</span>
                 </div>
                 {error.interestRate && <span className='error-message'>This field is required</span>}
               </div>
